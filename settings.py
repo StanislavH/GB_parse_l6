@@ -1,4 +1,3 @@
-#BOT_NAME = 'books_images'
 BOT_NAME = 'leroy_images'
 
 SPIDER_MODULES = ['Leroy.spiders']
