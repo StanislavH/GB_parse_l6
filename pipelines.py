@@ -5,15 +5,13 @@ from os.path import splitext
 
 class DataBasePipeline(object):
     def __init__(self):
-        # client = MongoClient('localhost', 27017)
-        # self.mongo_base = client.avito_photo
-        pass
+        client = MongoClient('localhost', 27017)
+        self.mongo_base = client.avito_photo
 
     def process_item(self, item, spider):
-        # collection = self.mongo_base[spider.name]
-        # collection.insert_one(item)
-        # return item
-        pass
+        collection = self.mongo_base[spider.name]
+        collection.insert_one(item)
+        return item
 
 
 class LeroyPipeline(FilesPipeline):
